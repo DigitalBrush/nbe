@@ -18,12 +18,36 @@ $container = get_theme_mod( 'understrap_container_type' );
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
+	<link href="<?php echo get_template_directory_uri();?>/assets/plugins/bootstrap/css/bootstrap.css" rel="stylesheet">
+
+
+  <link href="<?php echo get_template_directory_uri();?>/assets/pages/css/slider.css" rel="stylesheet">
+
+  <link href="<?php echo get_template_directory_uri();?>/assets/corporate/css/style.css" rel="stylesheet">
+
 	<?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?> <?php understrap_body_attributes(); ?>>
 <?php do_action( 'wp_body_open' ); ?>
 <div class="site" id="page">
+
+	   <div class="pre-header">
+        <div class="container">
+            <div class="row">
+                <!-- BEGIN TOP BAR LEFT PART -->
+                <div class="col-md-6 col-sm-6 additional-shop-info">
+                    <ul class="list-unstyled list-inline">
+                        <li>Notre societe</li>
+                        <li>Nos services</li>
+                        <li>Help & FAQs</li>                      
+                      
+                    </ul>
+                </div>
+            
+            </div>
+        </div>        
+    </div>
 
 	<!-- ******************* The Navbar Area ******************* -->
 	<div id="wrapper-navbar">
