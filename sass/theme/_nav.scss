@@ -1,0 +1,263 @@
+.top-nav {
+    height: 40px;
+    background: $nbe-grey;
+    .navbar-top {
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        padding: 0;
+        margin: 0;
+        .active {
+            .nav-link {
+                color: $nbe-blue !important;
+            }
+        }
+        .nav-link {
+            font-size: 12px;
+            font-weight: 500;
+            padding: 0.7rem 1rem!important;
+            text-transform: initial;
+            color: $nbe-dark;
+            &:hover {
+                color: $nbe-blue;
+            }
+            &:active {
+                color: $nbe-blue !important;
+            }
+            @include media-breakpoint-down(xs) {
+                padding: 0.7rem 0.5rem!important;
+            }
+        }
+    }
+    .switch-lang {
+        float: right;
+        cursor: pointer;
+        z-index: 50;
+        &:hover {
+            .lang-dropdown {
+                display: block;
+                padding: $spacing-xs;
+            }
+        }
+        .switcher-link {
+            color: #fff;
+            &:hover {
+                color: #fff;
+            }
+        }
+        .current-lang {
+            padding: $spacing-xs;
+        }
+        .lang-flag {
+            width: $spacing-md;
+            display: inline-block;
+        }
+        .lang-dropdown {
+            display: none;
+            border-radius: 5px;
+            margin-top: 2px;
+        }
+        .selecting-lang {
+            cursor: pointer;
+            &:hover {
+                background: $gray-300;
+            }
+        }
+        
+        li {
+            list-style-type: none;
+        }
+        .menu-arrow {
+            display: inline-block;
+            width: 10px;
+            margin-left: 10px;
+            vertical-align: top;
+            margin-top: 6px;
+        }
+    }
+}
+
+
+.navbar {
+    min-height: 80px;
+    width: 100%;
+    @include media-breakpoint-up(md) {
+		padding: 0;
+    }
+    @include media-breakpoint-down(xs) {
+        background-color: $white;
+    }
+    .navbar-brand {
+        background-color: $white;
+        padding: $spacing;
+        border-radius: 0 0 $spacing-xs $spacing-xs;
+        img {
+            width: 100px;
+        }
+    }
+    .header-bar {
+        width: 100%;
+        @include media-breakpoint-down(xs) {
+            width: auto;
+        }
+        .logo-bar {
+            @include media-breakpoint-down(xs) {
+                display: flex;
+                justify-content: space-between;
+            }
+            .navbar-toggler {
+                border: 0;
+                color: $nbe-blue;
+                text-decoration: none;
+                .navbar-toggler-icon {
+                    color: $nbe-dark;
+                    font-size: 2rem;
+                }
+                &:hover {
+                    text-decoration: none;
+                }
+                &:active {
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+    .navbar-nav {
+        .active {
+            .nav-link {
+                font-weight: 600;
+            }
+        }
+        .nav-link {
+            font-size: 14px;
+            padding: 1rem !important;
+            text-transform: uppercase;
+            color: $nbe-dark;
+            &:hover {
+                font-weight: 600;
+                border-bottom: 3px solid $primary;
+            }
+            &:active {
+                font-weight: 600;
+                border-bottom: 3px solid $primary;
+            }
+        }
+    }
+    &.sticky {
+        -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 40, 86, 0.3);
+        -moz-box-shadow: 0px 0px 5px 0px rgba(0, 40, 86, 0.3);
+        box-shadow: 0px 0px 5px 0px rgba(0, 40, 86, 0.3);
+        background: $white;
+        .nav-link {
+            color: $nbe-blue;
+        }
+        .navbar-collapse {
+            &.show {
+                .nav-link {
+                    color: $nbe-blue !important;
+                }
+                .active {
+                    .nav-link {
+                        color: $nbe-blue !important;
+                    }
+                }
+            }
+        }
+    }
+    &.stickybg {
+        background: $white;
+        -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 40, 86, 0.3);
+        -moz-box-shadow: 0px 0px 5px 0px rgba(0, 40, 86, 0.3);
+        box-shadow: 0px 0px 5px 0px rgba(0, 40, 86, 0.3);
+        .nav-link {
+            color: $nbe-blue;
+        }
+    } 
+}
+
+.user-menu {
+    &.navbar-nav {
+        flex-direction: row !important;
+        .nav-link {
+            display: inline-block;
+        }
+    }
+}
+
+
+
+.search-form {
+	height: auto;
+	border-bottom: 3px solid $nbe-dark;
+	padding: 10px;
+    .search-box {
+        float: left;
+        background: none;
+        border-radius: 2rem;
+        outline: none;
+        border: none;
+        position: relative;
+        opacity: 1;
+        transition: all .75s ease-in;
+        cursor: pointer;
+    }
+    .search-icon {
+        box-sizing: border-box;
+        float: right;
+        margin-left: .8rem;
+        margin-top: 0;
+        cursor: pointer;
+        position: absolute;
+        transition: all .25s ease-in;
+        padding: .7rem;
+        border-radius: 50%;
+    }
+}
+
+
+
+
+.home {
+    .navbar {
+        &.sticky {
+            background: none;
+            box-shadow: none;
+            @include media-breakpoint-down(xs) {
+                background: $white;
+                -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 40, 86, 0.3);
+                -moz-box-shadow: 0px 0px 5px 0px rgba(0, 40, 86, 0.3);
+                box-shadow: 0px 0px 5px 0px rgba(0, 40, 86, 0.3);
+            }
+            .nav-link {
+                color: $white;
+            }
+            .navbar-collapse {
+                &.show {
+                    .nav-link {
+                        color: $nbe-blue !important;
+                    }
+                    .active {
+                        .nav-link {
+                            color: $nbe-blue !important;
+                        }
+                    }
+                }
+            }
+        }
+        &.stickybg {
+            background: $white;
+            -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 40, 86, 0.3);
+            -moz-box-shadow: 0px 0px 5px 0px rgba(0, 40, 86, 0.3);
+            box-shadow: 0px 0px 5px 0px rgba(0, 40, 86, 0.3);
+            .nav-link {
+                color: $nbe-blue;
+            }
+        }
+    }
+}
+
+
+
+
+

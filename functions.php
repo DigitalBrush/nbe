@@ -42,3 +42,13 @@ if ( class_exists( 'Jetpack' ) ) {
 foreach ( $understrap_includes as $file ) {
 	require_once $understrap_inc_dir . $file;
 }
+
+function wpb_custom_new_menu() {
+	register_nav_menu('topmenu',__( 'Top Menu' ));
+  }
+  add_action( 'init', 'wpb_custom_new_menu' );
+
+function add_menuclass($ulclass) {
+return preg_replace('/<a/', '<a class="nav-link"', $ulclass, -1);
+}
+add_filter('wp_nav_menu','add_menuclass');

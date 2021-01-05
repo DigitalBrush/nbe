@@ -21,7 +21,8 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 				<div class="row">
 
-					<?php dynamic_sidebar( 'statichero' ); ?>
+					<div class="col-sm-6"></div>
+					<div class="col-sm-6"></div>
 
 				</div>
 

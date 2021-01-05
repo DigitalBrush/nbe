@@ -1,1 +1,101 @@
-// This is an empty scss file for your custom styles - Please add your super duper awesome mega design styles here
+body {
+    font-family: $body-font;
+}
+
+h1 {
+    font-size: 42px;
+    font-weight: 700;
+    @include media-breakpoint-down(xs) {
+		font-size: 28px;
+    }
+}
+
+h2 {
+	@include media-breakpoint-down(xs) {
+		font-size: 24px;
+	}
+}
+
+h3 {
+	@include media-breakpoint-down(xs) {
+		font-size: 18px;
+	}
+}
+
+.btn {
+    border-radius: 0;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 120%;
+    text-transform: uppercase;
+    padding: 16px 32px;
+    margin: $spacing 0;
+}
+
+
+.section-services {
+    padding: $spacing-xxl 0;
+	.single-service {
+        margin-top: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+		.service-icon {
+			img {
+                width: 64px;
+				min-width: 64px;
+			}
+		}
+		.service-desc {
+            padding-left: $spacing-md;
+            .title {
+				font-size: 18px;
+				font-weight: 700;
+				line-height: 1.8em;
+			}
+			.description {
+				margin-bottom: 22px;
+				font-size: 14px;
+				line-height: 1.8em;
+			}
+			a {
+				color: #fff;
+				font-size: 14px;
+				text-decoration: none;
+				i {
+					margin-right: 10px;
+					color: #f70037;
+				}
+			}
+		}
+	}
+}
+
+.category-section {
+    display: flex;
+    justify-content: center;
+    .category {
+        background-color: $nbe-grey;
+        padding: $spacing-lg;
+        min-height: 600px;
+        &.category-1 {
+            background-image: url("../img/bgCategory1.png");
+            background-repeat: no-repeat;
+            background-position: -20% 350%;
+        }
+        &.category-2 {
+            background-image: url("../img/bgCategory1.png");
+            background-repeat: no-repeat;
+            background-position: -20% 350%;
+        }
+        &.category-3 {
+            background-image: url("../img/bgCategory1.png");
+            background-repeat: no-repeat;
+            background-position: -20% 350%;
+        }
+    }
+}
+
+
+
+
