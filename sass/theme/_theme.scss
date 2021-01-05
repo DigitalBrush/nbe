@@ -32,6 +32,12 @@ h3 {
     margin: $spacing 0;
 }
 
+#search-btn {
+    border:none !important;
+    background: none !important;
+}
+
+
 
 .section-services {
     padding: $spacing-xxl 0;
@@ -79,7 +85,7 @@ h3 {
         padding: $spacing-lg;
         min-height: 600px;
         &.category-1 {
-            background-image: url("../img/bgCategory1.png");
+        background-image: url("../img/bgCategory1.png");
             background-repeat: no-repeat;
             background-position: -20% 350%;
         }

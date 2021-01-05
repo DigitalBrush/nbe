@@ -38,6 +38,8 @@ $container = get_theme_mod( 'understrap_container_type' );
 				<div class="row">
 					<div class="col-10">
 						<?php
+
+
 						wp_nav_menu(
 							array(
 								'theme_location'  => 'topmenu',
@@ -107,26 +109,28 @@ $container = get_theme_mod( 'understrap_container_type' );
 						?>
 					</div>
 					<div class="col-sm-3">
-						<form class="search-form form-inline my-2 my-lg-0">
-							<input type="text" id="box" placeholder="Rechercher un produit..." class="search-box">
-							<span class="material-icons">search</span>
+						<form  role="search" method="get" action="<?php echo esc_url(home_url('/')); ?>" class="search-form form-inline my-2 my-lg-0">
+
+							<input type="text" id="box" name="s" placeholder="Rechercher un produit..." class="search-box">
+							<button type="submit" id="search-btn" class="material-icons">search</button>
 						</form>
+
 					</div>
 					
 					<div class="col-sm-2">
 						<ul class="user-menu navbar-nav">
 							<li class="nav-item">
-								<a class="nav-link" href="#">
+								<a class="nav-link" href="<?php echo esc_url(home_url('/my-account')); ?>">
 									<span class="material-icons">person</span>
 								</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="#">
+								<a class="nav-link" href="<?php echo esc_url(home_url('/shop')); ?>">
 									<span class="material-icons">favorite</span>
 								</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="#">
+								<a class="nav-link" href="<?php echo esc_url(home_url('/cart')); ?>">
 									<span class="material-icons">shopping_cart</span>
 								</a>
 							</li>

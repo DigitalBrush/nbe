@@ -183,6 +183,7 @@
 
             </form>
         </div>
+        
           <!-- BEGIN CART -->
         <div class="woo-icons col-md-2 col-sm-2">
        
