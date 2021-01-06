@@ -107,7 +107,7 @@ h3 {
                     img {
                         height: 100%;
                     }
-                    @include media-breakpoint-up(md) {
+                    @include media-breakpoint-down(md) {
                         height: 200px;
                     }
                 }
