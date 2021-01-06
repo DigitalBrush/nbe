@@ -35,7 +35,7 @@ if ( ! wc_coupons_enabled() ) { // @codingStandardsIgnoreLine.
 	</p>
 
 	<p class="form-row form-row-last">
-		<button type="submit" class="btn btn-outline-primary" name="apply_coupon" value="<?php esc_attr_e( 'Apply coupon', 'nbe' ); ?>"><?php esc_html_e( 'Apply coupon', 'nbe' ); ?></button>
+		<button type="submit" class="btn btn-primary" name="apply_coupon" value="<?php esc_attr_e( 'Apply coupon', 'nbe' ); ?>"><?php esc_html_e( 'Apply coupon', 'nbe' ); ?></button>
 	</p>
 
 	<div class="clear"></div>

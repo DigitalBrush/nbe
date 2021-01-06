@@ -1,9 +1,12 @@
 .footer-top {
     background: $nbe-grey !important;
-    .widget-title {
-        font-size: 14px;
-        text-transform: uppercase;
-        font-weight: 700;
+    .footer-widget {
+        margin-bottom: $spacing-lg;
+        .widget-title {
+            font-size: 14px;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
     }
     .menu {
         padding: 0;

@@ -5,8 +5,17 @@ body {
 h1 {
     font-size: 42px;
     font-weight: 700;
-    @include media-breakpoint-down(xs) {
+    @include media-breakpoint-down(md) {
 		font-size: 28px;
+    }
+    @include media-breakpoint-down(sm) {
+		font-size: 28px;
+    }
+    &.section-title {
+        font-weight: 300;
+        text-align: center;
+        text-transform: uppercase;
+        padding: 0 0 $spacing-lg 0;
     }
 }
 
@@ -37,7 +46,98 @@ h3 {
     background: none !important;
 }
 
+.section {
+    padding: 100px 0;
+    @include media-breakpoint-down(xs) {
+        padding: 60px 0;
+    }
+}
 
+.contact-cta {
+    color: $white;
+    padding: $spacing-xxl;
+    background: $nbe-gray;
+}
+.section-who {
+    display: flex;
+    align-items: center;
+    @include media-breakpoint-down(xs) {
+        display: block;
+    }
+    .about-text {
+        background: $white;
+        position: relative;
+        z-index: 2;
+        padding: $spacing-xl $spacing-xl $spacing-xl 0;
+        @include media-breakpoint-up(md) {
+            margin-right: -100px;
+            max-width: 500px;
+            float: right;
+        }
+        h1 {
+            font-weight: 300;
+            text-transform: uppercase;
+            padding: 0 0 $spacing-lg 0;
+        }
+        @include media-breakpoint-down(xs) {
+            padding: $spacing-lg;
+            margin: 0 auto;
+        }
+    }
+    .about-img {
+        position: relative;
+        z-index: 1;
+    }
+}
+
+.product-section {
+    .product {
+        height: 100%;
+        margin-bottom: $spacing-xxl;
+        .product-item {
+            height: 100%;
+            a {
+                display: inline-block;
+            }
+            &.woocommerce {
+                .pi-img-wrapper {
+                    max-height: 300px;
+                    height: 300px;
+                    text-align: center;
+                    img {
+                        height: 100%;
+                    }
+                    @include media-breakpoint-up(md) {
+                        height: 200px;
+                    }
+                }
+                .entry-title {
+                    color: $nbe-dark;
+                    font-weight: 300;
+                    font-size: 18px;
+                    text-transform: capitalize;
+                }
+                .pi-price {
+                    color: $nbe-dark;
+                    font-size: 18px;
+                    text-transform: capitalize;
+                }
+                .pi-rating {
+                    float: left;
+                    padding: $spacing 0;
+                }
+            }
+        }
+    }
+}
+
+.logo-section {
+    .logo-carousel {
+        .client-logo {
+            padding: $spacing-sm;
+        }
+    }
+}
 
 .section-services {
     padding: $spacing-xxl 0;
@@ -82,22 +182,16 @@ h3 {
     justify-content: center;
     .category {
         background-color: $nbe-grey;
-        padding: $spacing-lg;
-        min-height: 600px;
-        &.category-1 {
-        background-image: url("../img/bgCategory1.png");
-            background-repeat: no-repeat;
-            background-position: -20% 350%;
+        margin-bottom: $spacing-lg;
+        .category-inner {
+            padding: $spacing-lg;
+            min-height: 350px;
+            word-wrap: break-word;
         }
-        &.category-2 {
-            background-image: url("../img/bgCategory1.png");
-            background-repeat: no-repeat;
-            background-position: -20% 350%;
-        }
-        &.category-3 {
-            background-image: url("../img/bgCategory1.png");
-            background-repeat: no-repeat;
-            background-position: -20% 350%;
+        .category-image {
+            margin-top: $spacing-lg;
+            max-height: 200px;
+            overflow: hidden;
         }
     }
 }

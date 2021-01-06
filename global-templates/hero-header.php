@@ -11,8 +11,6 @@ defined( 'ABSPATH' ) || exit;
 $container = get_theme_mod( 'understrap_container_type' );
 	?>
 
-	<div class="wrapper" id="wrapper-hero">
-
 		<div class="<?php echo esc_attr( $container ); ?>" id="wrapper-static-content" tabindex="-1">
 
 			<div class="row hero-header">
@@ -112,20 +110,21 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 
 				<div class="col-sm-4">
-					<div class="category category-1">
-						<p class="subtext">Category <?php echo $num;?></p>
-						<h1><?php echo $cat->name  ?></h1>
-						<p><?php echo $cat->description; ?></p>
-						<a href="<?php echo get_term_link($cat->slug, 'product_cat');?>" class="btn btn-lg btn-secondary">Voir les produits</a>
-
-						    <?php
-                $thumbnail_id = get_term_meta( $cat->term_id, 'thumbnail_id', true );    
-                $image = wp_get_attachment_url( $thumbnail_id ); 
-                ?>
-                   <img src="<?php echo $image; ?>" style="width:100%; height:200px">
-
-
-                  </div>
+					<div class="category">
+						<div class="category-inner">
+							<p class="subtext">Category <?php echo $num;?></p>
+							<h2><?php echo $cat->name  ?></h2>
+							<p><?php echo $cat->description; ?></p>
+							<a href="<?php echo get_term_link($cat->slug, 'product_cat');?>" class="btn btn-lg btn-secondary">Voir les produits</a>
+						</div>
+						<div class="category-image">
+						<?php
+							$thumbnail_id = get_term_meta( $cat->term_id, 'thumbnail_id', true );    
+							$image = wp_get_attachment_url( $thumbnail_id ); 
+						?>
+						<img src="<?php echo $image; ?>" style="width:100%; height:200px">
+					  </div>
+				  	</div>
                 </div>
                   <?php
 
@@ -134,32 +133,6 @@ $container = get_theme_mod( 'understrap_container_type' );
                   }
                   ?>
 
-
-
-
-<!-- 
-				<div class="col-sm-4">
-					<div class="category category-2">
-						<p class="subtext">Category 2</p>
-						<h1>Épicerie</h1>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor</p>
-						<a class="btn btn-lg btn-secondary">Voir les produits</a>
-					</div>
-				</div>
-				<div class="col-sm-4">
-					<div class="category category-3">
-						<p class="subtext">Category 3</p>
-						<h1>Hygiène & Beauté</h1>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor</p>
-						<a class="btn btn-lg btn-secondary">Voir les produits</a>
-					</div>
-				</div> -->
 			</div>
-
-
-
-
-
-		</div>
 
 	</div>

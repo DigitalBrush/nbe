@@ -1,0 +1,59 @@
+.woocommerce {
+	div.product {
+		margin-bottom: 0;
+		position: relative;
+		.product_title {
+            font-size: 26px;
+            font-weight: 600;
+            text-transform: capitalize;
+		}
+		p.price {
+			color: $nbe-dark;
+			font-size: 1.25em;
+		}
+		span.price {
+			color: $nbe-dark;
+			font-size: 1.25em;
+        }
+        form.cart {
+            div.quantity {
+                .qty {
+                    padding: 16px 0;
+                    font-size: 16px;
+                    line-height: 120%;
+                    border-radius: 0;
+                    border: 0;
+                    background: $nbe-grey;
+                    font-weight: 600;
+                    margin: 10px 0;
+                    text-transform: uppercase;
+                }
+            }
+        }
+        div.images {
+            max-height: 600px;
+            text-align: center;
+            img {
+                width: auto;
+                height: 100%;
+            }
+        }
+    }
+    ul.products {
+        li.product {
+            .woocommerce-loop-product__link {
+                .woocommerce-loop-product__title {
+                    color: $nbe-dark;
+                    font-weight: 300;
+                    font-size: 18px;
+                    text-transform: capitalize;
+                }
+            }
+            .price {
+                color: $nbe-dark;
+                font-size: 18px;
+                text-transform: capitalize;
+            }
+        }
+    }
+}

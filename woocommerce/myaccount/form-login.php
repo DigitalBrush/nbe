@@ -50,7 +50,7 @@ $col = 'yes' === get_option( 'woocommerce_enable_myaccount_registration' ) ? 6 :
 					<input class="woocommerce-form__input woocommerce-form__input-checkbox" name="rememberme" type="checkbox" id="rememberme" value="forever" /> <span><?php esc_html_e( 'Remember me', 'nbe' ); ?></span>
 				</label>
 				<?php wp_nonce_field( 'woocommerce-login', 'woocommerce-login-nonce' ); ?>
-				<button type="submit" class="woocommerce-form-login__submit btn btn-outline-primary" name="login" value="<?php esc_attr_e( 'Log in', 'nbe' ); ?>"><?php esc_html_e( 'Log in', 'nbe' ); ?></button>
+				<button type="submit" class="woocommerce-form-login__submit btn btn-primary" name="login" value="<?php esc_attr_e( 'Log in', 'nbe' ); ?>"><?php esc_html_e( 'Log in', 'nbe' ); ?></button>
 			</p>
 			<p class="woocommerce-LostPassword lost_password">
 				<a href="<?php echo esc_url( wp_lostpassword_url() ); ?>"><?php esc_html_e( 'Lost your password?', 'nbe' ); ?></a>
@@ -103,7 +103,7 @@ $col = 'yes' === get_option( 'woocommerce_enable_myaccount_registration' ) ? 6 :
 
 			<p class="woocommerce-form-row form-row">
 				<?php wp_nonce_field( 'woocommerce-register', 'woocommerce-register-nonce' ); ?>
-				<button type="submit" class="woocommerce-form-register__submit btn btn-outline-primary" name="register" value="<?php esc_attr_e( 'Register', 'nbe' ); ?>"><?php esc_html_e( 'Register', 'nbe' ); ?></button>
+				<button type="submit" class="woocommerce-form-register__submit btn btn-primary" name="register" value="<?php esc_attr_e( 'Register', 'nbe' ); ?>"><?php esc_html_e( 'Register', 'nbe' ); ?></button>
 			</p>
 
 			<?php do_action( 'woocommerce_register_form_end' ); ?>

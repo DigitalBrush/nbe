@@ -83,7 +83,7 @@ if ( $customer_orders ) : ?>
 
 								if ( ! empty( $orders_actions ) ) {
 									foreach ( $orders_actions as $key => $orders_action ) {
-										echo '<a href="' . esc_url( $orders_action['url'] ) . '" class="btn btn-outline-primary ' . sanitize_html_class( $key ) . '">' . esc_html( $orders_action['name'] ) . '</a>';
+										echo '<a href="' . esc_url( $orders_action['url'] ) . '" class="btn btn-primary ' . sanitize_html_class( $key ) . '">' . esc_html( $orders_action['name'] ) . '</a>';
 									}
 								}
 								?>

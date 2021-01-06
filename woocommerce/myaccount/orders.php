@@ -67,7 +67,7 @@ do_action( 'woocommerce_before_account_orders', $has_orders ); ?>
 
 								if ( ! empty( $orders_actions ) ) {
 									foreach ( $orders_actions as $key => $orders_action ) {
-										echo '<a href="' . esc_url( $orders_action['url'] ) . '" class="woocommerce-button btn btn-outline-primary ' . sanitize_html_class( $key ) . '">' . esc_html( $orders_action['name'] ) . '</a>';
+										echo '<a href="' . esc_url( $orders_action['url'] ) . '" class="woocommerce-button btn btn-primary ' . sanitize_html_class( $key ) . '">' . esc_html( $orders_action['name'] ) . '</a>';
 									}
 								}
 								?>
@@ -86,18 +86,18 @@ do_action( 'woocommerce_before_account_orders', $has_orders ); ?>
 	<?php if ( 1 < $customer_orders->max_num_pages ) : ?>
 		<div class="woocommerce-pagination woocommerce-pagination--without-numbers woocommerce-Pagination">
 			<?php if ( 1 !== $current_page ) : ?>
-				<a class="woocommerce-button woocommerce-button--previous woocommerce-Button woocommerce-Button--previous btn btn-outline-primary" href="<?php echo esc_url( wc_get_endpoint_url( 'orders', $current_page - 1 ) ); ?>"><?php esc_html_e( 'Previous', 'nbe' ); ?></a>
+				<a class="woocommerce-button woocommerce-button--previous woocommerce-Button woocommerce-Button--previous btn btn-primary" href="<?php echo esc_url( wc_get_endpoint_url( 'orders', $current_page - 1 ) ); ?>"><?php esc_html_e( 'Previous', 'nbe' ); ?></a>
 			<?php endif; ?>
 
 			<?php if ( intval( $customer_orders->max_num_pages ) !== $current_page ) : ?>
-				<a class="woocommerce-button woocommerce-button--next woocommerce-Button woocommerce-Button--next btn btn-outline-primary" href="<?php echo esc_url( wc_get_endpoint_url( 'orders', $current_page + 1 ) ); ?>"><?php esc_html_e( 'Next', 'nbe' ); ?></a>
+				<a class="woocommerce-button woocommerce-button--next woocommerce-Button woocommerce-Button--next btn btn-primary" href="<?php echo esc_url( wc_get_endpoint_url( 'orders', $current_page + 1 ) ); ?>"><?php esc_html_e( 'Next', 'nbe' ); ?></a>
 			<?php endif; ?>
 		</div>
 	<?php endif; ?>
 
 <?php else : ?>
 	<div class="woocommerce-message woocommerce-message--info woocommerce-Message woocommerce-Message--info woocommerce-info">
-		<a class="btn btn-outline-primary" href="<?php echo esc_url( apply_filters( 'woocommerce_return_to_shop_redirect', wc_get_page_permalink( 'shop' ) ) ); ?>">
+		<a class="btn btn-primary" href="<?php echo esc_url( apply_filters( 'woocommerce_return_to_shop_redirect', wc_get_page_permalink( 'shop' ) ) ); ?>">
 			<?php esc_html_e( 'Go to the shop', 'nbe' ); ?>
 		</a>
 		<?php esc_html_e( 'No order has been made yet.', 'nbe' ); ?>

@@ -13,24 +13,20 @@ defined( 'ABSPATH' ) || exit;
 get_header();
 $container = get_theme_mod( 'understrap_container_type' );
 
-if ( is_front_page() ) {
-	get_template_part( 'global-templates/hero-header' );
-}
 ?>
 
-<div class="wrapper" id="full-width-page-wrapper">
+<div id="full-width-page-wrapper">
 
-	<div class="<?php echo esc_attr( $container ); ?>" id="content">
+	<div id="content">
 
-		<div class="row">
-
-			<div class="col-md-12 content-area" id="primary">
+			<div class="content-area" id="primary">
 
 				<main class="site-main" id="main" role="main">
 					<?php
 
 
 					if ( is_front_page() ) {
+						get_template_part( 'global-templates/hero-header' );
 						get_template_part( 'global-templates/brands' ); 
 						get_template_part( 'global-templates/bestsellers' );
 						get_template_part( 'global-templates/who' ); 
@@ -55,7 +51,7 @@ if ( is_front_page() ) {
 
 			</div><!-- #primary -->
 
-		</div><!-- .row end -->
+
 
 	</div><!-- #content -->
 

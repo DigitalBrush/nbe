@@ -35,7 +35,7 @@ do_action( 'woocommerce_before_lost_password_form' );
 
 	<p class="woocommerce-form-row form-row">
 		<input type="hidden" name="wc_reset_password" value="true" />
-		<button type="submit" class="btn btn-outline-primary" value="<?php esc_attr_e( 'Reset password', 'nbe' ); ?>"><?php esc_html_e( 'Reset password', 'nbe' ); ?></button>
+		<button type="submit" class="btn btn-primary" value="<?php esc_attr_e( 'Reset password', 'nbe' ); ?>"><?php esc_html_e( 'Reset password', 'nbe' ); ?></button>
 	</p>
 
 	<?php wp_nonce_field( 'lost_password', 'woocommerce-lost-password-nonce' ); ?>

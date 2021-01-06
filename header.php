@@ -21,6 +21,9 @@ $container = get_theme_mod( 'understrap_container_type' );
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css" integrity="sha512-OTcub78R3msOCtY3Tc6FzeDJ8N9qvQn1Ph49ou13xgA9VsH9+LRxoFU6EqLhW4+PKRfU+/HReXmSZXHEkpYoOA==" crossorigin="anonymous" />
 	<?php wp_head(); ?>
 </head>
 
@@ -63,7 +66,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 			</div>
 		</div>
 
-		<nav id="main-nav" class="navbar navbar-expand-md navbar-light" aria-labelledby="main-nav-label">
+		<nav id="main-nav" class="navbar navbar-expand-sm navbar-light" aria-labelledby="main-nav-label">
 
 			<h2 id="main-nav-label" class="sr-only">
 				<?php esc_html_e( 'Main Navigation', 'nbe' ); ?>
@@ -75,7 +78,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 		<?php endif; ?>
 				
 				<div class="row header-bar">
-					<div class="col-sm-2 logo-bar">
+					<div class="col-lg-2 col-md-3 logo-bar">
 
 							<!-- Your site title as branding in the menu -->
 							<?php if ( ! has_custom_logo() ) { ?>
@@ -84,14 +87,14 @@ $container = get_theme_mod( 'understrap_container_type' );
 							the_custom_logo();
 							} ?><!-- end custom logo -->
 						
-						<button class="navbar-toggler x" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'nbe' ); ?>">
+						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'nbe' ); ?>">
 							<span class="navbar-toggler-icon"></span>
 						</button>
 					</div>
 					
 
 						
-					<div class="col-sm-5">
+					<div class="col-lg-5 col-md-9">
 						<!-- The WordPress Menu goes here -->
 						<?php
 						wp_nav_menu(
@@ -108,16 +111,16 @@ $container = get_theme_mod( 'understrap_container_type' );
 						);
 						?>
 					</div>
-					<div class="col-sm-3">
+					<div class="col-lg-3 col-md-6">
 						<form  role="search" method="get" action="<?php echo esc_url(home_url('/')); ?>" class="search-form form-inline my-2 my-lg-0">
 
 							<input type="text" id="box" name="s" placeholder="Rechercher un produit..." class="search-box">
-							<button type="submit" id="search-btn" class="material-icons">search</button>
+							<button type="submit" id="search-btn" class="btn search-icon"><span class="material-icons">search</span></button>
 						</form>
 
 					</div>
 					
-					<div class="col-sm-2">
+					<div class="col-lg-2 col-md-6">
 						<ul class="user-menu navbar-nav">
 							<li class="nav-item">
 								<a class="nav-link" href="<?php echo esc_url(home_url('/my-account')); ?>">

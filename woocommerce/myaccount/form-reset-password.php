@@ -42,7 +42,7 @@ do_action( 'woocommerce_before_reset_password_form' );
 
 	<p class="woocommerce-form-row form-row">
 		<input type="hidden" name="wc_reset_password" value="true" />
-		<button type="submit" class="btn btn-outline-primary" value="<?php esc_attr_e( 'Save', 'nbe' ); ?>"><?php esc_html_e( 'Save', 'nbe' ); ?></button>
+		<button type="submit" class="btn btn-primary" value="<?php esc_attr_e( 'Save', 'nbe' ); ?>"><?php esc_html_e( 'Save', 'nbe' ); ?></button>
 	</p>
 
 	<?php wp_nonce_field( 'reset_password', 'woocommerce-reset-password-nonce' ); ?>

@@ -11,37 +11,17 @@ defined( 'ABSPATH' ) || exit;
 $container = get_theme_mod( 'understrap_container_type' );
 	?>
 
-	<div class="wrapper" id="wrapper-hero">
-
-<div class="<?php echo esc_attr( $container ); ?>" id="wrapper-static-content" tabindex="-1">
-
-			
-
-		
-
-<div class="row category-section">         
-       
-          	<br><br>
-            <h1 style="text-align: center;">NOS MARQUES</h1>
-            <br><br>
-</div>
-
-<div class="row category-section">         
- 
-              <?php for( $i=1;$i<6;$i++):?>                
-              
-
-              <div class="col-md-2">
-                
-                <img src="<?php echo get_option('brand_img_'.$i);?>" style="height:100px;">
-               
-              </div>
-
-              <?php endfor; ?>      
-
-          <!-- END SALE PRODUCT -->
-        </div>
-
+<div class="section">
+  <div class="<?php echo esc_attr( $container ); ?>" id="wrapper-static-content" tabindex="-1">
+    <h1 class="section-title">Nos Marques</h1>
+		<div class="row logo-section">
+      <div class="owl-carousel owl-theme logo-carousel">
+        <?php for( $i=1;$i<6;$i++):?>
+          <div class="client-logo">
+            <img src="<?php echo get_option('brand_img_'.$i);?>" class="img-fluid">
+          </div>
+        <?php endfor; ?>
+      </div>
 		</div>
-
 	</div>
+</div>
