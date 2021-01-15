@@ -27,7 +27,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 					</div>
 				</div>
 			</div>
-
+         
 			<div class="row section-services">
 
 				<div class="col-md-6 col-lg-3">
@@ -46,7 +46,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 				<div class="col-md-6 col-lg-3">
 					<div class="single-service">
 						<div class="service-icon">
-							<img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/img/check-circle-solid.svg" />
+							<img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/img/truck.png" />
 						</div>
 						<div class="service-desc">
 							<h3 class="title">Logistique & expédition</h3>
@@ -58,7 +58,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 				<div class="col-md-6 col-lg-3">
 					<div class="single-service">
 						<div class="service-icon">
-							<img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/img/check-circle-solid.svg" />
+							<img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/img/dist.png" />
 						</div>
 						<div class="service-desc">
 							<h3 class="title">Distribution</h3>
@@ -70,7 +70,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 				<div class="col-md-6 col-lg-3">
 					<div class="single-service">
 						<div class="service-icon">
-							<img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/img/check-circle-solid.svg" />
+							<img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/img/avant.png" />
 						</div>
 						<div class="service-desc">
 							<h3 class="title">Avantages</h3>
@@ -103,7 +103,7 @@ $container = get_theme_mod( 'understrap_container_type' );
                            'hide_empty'   => $empty
                     );
                    $all_categories = get_categories( $args );
-                   $num=1;
+               
                    foreach ($all_categories as $cat) {
                       if($cat->category_parent == 0) {
                           $category_id = $cat->term_id; ?>  
@@ -112,7 +112,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 				<div class="col-sm-4">
 					<div class="category">
 						<div class="category-inner">
-							<p class="subtext">Category <?php echo $num;?></p>
+						
 							<h2><?php echo $cat->name  ?></h2>
 							<p><?php echo $cat->description; ?></p>
 							<a href="<?php echo get_term_link($cat->slug, 'product_cat');?>" class="btn btn-lg btn-secondary">Voir les produits</a>

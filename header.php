@@ -53,14 +53,14 @@ $container = get_theme_mod( 'understrap_container_type' );
 						?>
 					</div>
 					<div class="col-2">
-						<div class="switch-lang">
+					<!-- 	<div class="switch-lang">
 							<div class="current-lang"><img class="lang-flag" src="https://cdn2.iconfinder.com/data/icons/world-flag-icons/128/Flag_of_United_Kingdom.png" />
 							</div>
 							<div class="lang-dropdown">
 								<div class="selecting-lang"><img class="lang-flag" src="https://cdn2.iconfinder.com/data/icons/world-flag-icons/128/Flag_of_France.png" />
 								</div>
 							</div>
-						</div>
+						</div> -->
 					</div>
 				</div>
 			</div>
