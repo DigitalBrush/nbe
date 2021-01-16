@@ -18,7 +18,7 @@ $container = get_theme_mod( 'understrap_container_type' );
       <div class="owl-carousel owl-theme logo-carousel">
         <?php for( $i=1;$i<6;$i++):?>
           <div class="client-logo">
-            <img src="<?php echo get_option('brand_img_'.$i);?>" class="img-fluid">
+            <a href="<?php echo esc_url(home_url('brand').'?brand='.get_option('brand_header'.$i)); ?>"><img src="<?php echo get_option('brand_img_'.$i);?>" class="img-fluid"></a>
           </div>
         <?php endfor; ?>
       </div>

@@ -71,6 +71,25 @@ add_filter('wp_nav_menu','add_menuclass');
     return $rating_html;
     }
 
+create_page("Brand"," ","page-templates/brands.php");
+function create_page($page_name,$content,$template){
+     if(get_page_by_title($page_name)==NULL|| get_post_status( get_page_by_title($page_name) )=="trash") {
+
+         $my_post = array(
+          'post_title'    => $page_name,
+          'post_content'  =>$content,         
+          'post_status'   => 'publish',      
+          'post_type'     =>'page',
+          'comment_status' =>'closed',
+          'page_template'  =>$template        
+        );
+        $post_id = wp_insert_post( $my_post);
+        
+        
+    }
+      
+        
+ }
 
 add_action('admin_menu', 'customize_homepage');
 
@@ -453,6 +472,15 @@ function brands(){
 <div class="col-md-4 ">
     <fieldset>
         <legend>Brand 1</legend>
+          <div class="form-group form-md-line-input">
+        <label class=" control-label">Brand Name</label>
+
+        <input type="text" name="brand_header1" value="<?php echo get_option('brand_header1');?>" class="form-control" autocomplete="off">
+       
+            <div class="form-control-focus"> </div>
+     
+         </div>
+
         <div class="form-group form-md-line-input">
             <label class="control-label">Image</label>
         <?php
@@ -475,6 +503,14 @@ function brands(){
 <div class="col-md-4 ">
     <fieldset>
         <legend>Brand 2</legend>
+           <div class="form-group form-md-line-input">
+        <label class=" control-label">Brand Name</label>
+
+        <input type="text" name="brand_header2" value="<?php echo get_option('brand_header2');?>" class="form-control" autocomplete="off">
+       
+            <div class="form-control-focus"> </div>
+     
+         </div>
         <div class="form-group form-md-line-input">
             <label class="control-label">Image</label>
         <?php
@@ -497,6 +533,14 @@ function brands(){
 <div class="col-md-4 ">
     <fieldset>
         <legend>Brand 3</legend>
+           <div class="form-group form-md-line-input">
+        <label class=" control-label">Brand Name</label>
+
+        <input type="text" name="brand_header3" value="<?php echo get_option('brand_header3');?>" class="form-control" autocomplete="off">
+       
+            <div class="form-control-focus"> </div>
+     
+         </div>
         <div class="form-group form-md-line-input">
             <label class="control-label">Image</label>
         <?php
@@ -516,6 +560,14 @@ function brands(){
 <div class="col-md-4 ">
     <fieldset>
         <legend>Brand 4</legend>
+           <div class="form-group form-md-line-input">
+        <label class=" control-label">Brand Name</label>
+
+        <input type="text" name="brand_header4" value="<?php echo get_option('brand_header4');?>" class="form-control" autocomplete="off">
+       
+            <div class="form-control-focus"> </div>
+     
+         </div>
         <div class="form-group form-md-line-input">
             <label class="control-label">Image</label>
         <?php
@@ -535,6 +587,14 @@ function brands(){
 <div class="col-md-4 ">
     <fieldset>
         <legend>Brand 5</legend>
+           <div class="form-group form-md-line-input">
+        <label class=" control-label">Brand Name</label>
+
+        <input type="text" name="brand_header5" value="<?php echo get_option('brand_header5');?>" class="form-control" autocomplete="off">
+       
+            <div class="form-control-focus"> </div>
+     
+         </div>
         <div class="form-group form-md-line-input">
             <label class="control-label">Image</label>
         <?php
@@ -569,6 +629,32 @@ function brands(){
 
     if(isset($_REQUEST["brand_btn"]))
     {               
+        $brand_header1 = $_REQUEST["brand_header1"];
+        $brand_header2 = $_REQUEST["brand_header2"];
+        $brand_header3 = $_REQUEST["brand_header3"];
+        $brand_header4 = $_REQUEST["brand_header4"];
+        $brand_header5 = $_REQUEST["brand_header5"];
+       
+        
+
+        add_option('brand_header1',$brand_header1,'','yes');
+        update_option('brand_header1',$brand_header1);
+
+        add_option('brand_header2',$brand_header1,'','yes');
+        update_option('brand_header2',$brand_header1);
+
+        add_option('brand_header3',$brand_header1,'','yes');
+        update_option('brand_header3',$brand_header1);
+
+        add_option('brand_header4',$brand_header1,'','yes');
+        update_option('brand_header4',$brand_header1);
+
+        add_option('brand_header5',$brand_header1,'','yes');
+        update_option('brand_header5',$brand_header1);
+
+      
+
+
         require_once(ABSPATH . "wp-admin" . '/includes/image.php');
         require_once(ABSPATH . "wp-admin" . '/includes/file.php');
         require_once(ABSPATH . "wp-admin" . '/includes/media.php'); 
