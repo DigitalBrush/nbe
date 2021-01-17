@@ -124,17 +124,17 @@ $container = get_theme_mod( 'understrap_container_type' );
 						<ul class="user-menu navbar-nav">
 							<li class="nav-item">
 								<a class="nav-link" href="<?php echo esc_url(home_url('/my-account')); ?>">
-									<span class="material-icons">person</span>
+									<img class="shop-icon" src="<?php echo get_template_directory_uri(); ?>/img/iconUser.svg" />
 								</a>
 							</li>
 							<li class="nav-item">
 								<a class="nav-link" href="<?php echo esc_url(home_url('/shop')); ?>">
-									<span class="material-icons">favorite</span>
+									<img class="shop-icon" src="<?php echo get_template_directory_uri(); ?>/img/iconFavorites.svg" />
 								</a>
 							</li>
 							<li class="nav-item">
 								<a class="nav-link" href="<?php echo esc_url(home_url('/cart')); ?>">
-									<span class="material-icons">shopping_cart</span>
+									<img class="shop-icon" src="<?php echo get_template_directory_uri(); ?>/img/iconCart.svg" />
 								</a>
 							</li>
 						</ul>

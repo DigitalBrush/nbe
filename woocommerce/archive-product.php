@@ -41,7 +41,7 @@ do_action( 'woocommerce_before_main_content' );
 
 			<?php get_template_part( 'sidebar-templates/sidebar', 'left' ); ?>
 
-			<div class="col-md-9 content-area" id="primary">
+			<div class="col-md-9 content-area products-area" id="primary">
 
 				<main class="site-main" id="main" role="main">
 

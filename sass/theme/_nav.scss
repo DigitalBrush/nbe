@@ -181,6 +181,9 @@
         flex-direction: row !important;
         .nav-link {
             display: inline-block;
+            .shop-icon {
+                width: 24px;
+            }
         }
     }
 }
