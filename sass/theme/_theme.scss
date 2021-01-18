@@ -94,6 +94,15 @@ h3 {
     .product {
         height: 100%;
         margin-bottom: $spacing-xxl;
+        a {
+            padding: $spacing-md;
+            display: block;
+            height: 100%;
+            &:hover {
+                box-shadow: $shadow;
+                border-radius: 2px;
+            }
+        }
         .product-item {
             height: 100%;
             a {

@@ -1,7 +1,11 @@
 .woocommerce {
+    .woocommerce-breadcrumb {
+        margin: 0;
+    }
 	div.product {
 		margin-bottom: 0;
-		position: relative;
+        position: relative;
+        
 		.product_title {
             font-size: 26px;
             font-weight: 600;
@@ -42,6 +46,15 @@
     ul.products {
         padding: $spacing-lg;
         li.product {
+            a {
+                padding: $spacing-md;
+                display: block;
+                height: 100%;
+                &:hover {
+                    box-shadow: $shadow;
+                    border-radius: 2px;
+                }
+            }
             .woocommerce-loop-product__link {
                 img {
                     max-height: 250px;
