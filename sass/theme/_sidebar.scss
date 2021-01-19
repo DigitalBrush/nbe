@@ -4,10 +4,12 @@
         .widget-title {
             border-top: 1px solid $gray-300;
             border-bottom: 1px solid $gray-300;
-            padding: $spacing 0;
+            padding: $spacing-md 0;
+            height: 70px;
+            margin: 0;
         }
         ul.product-categories {
-            padding: 0 $spacing-lg 0 0;
+            padding: $spacing-lg $spacing-lg 0 0;
             list-style: none;
             li.cat-item {
                 padding: $spacing-xs 0;
