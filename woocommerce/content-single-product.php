@@ -58,11 +58,17 @@ if ( post_password_required() ) {
 		 * @hooked WC_Structured_Data::generate_product_data() - 60
 		 */
 		do_action( 'woocommerce_single_product_summary' );
-		get_template_part( 'woocommerce/single-product-reviews' );
+		//get_template_part( 'woocommerce/single-product-reviews' );
+		do_action( 'woocommerce_after_single_product_summary' );
 		?>
 	</div>
 
+</div></div>
+
+	<div class="col-md-12">
 	<?php
+
+	woocommerce_output_related_products();
 	/**
 	 * Hook: woocommerce_after_single_product_summary.
 	 *
@@ -70,8 +76,11 @@ if ( post_password_required() ) {
 	 * @hooked woocommerce_upsell_display - 15
 	 * @hooked woocommerce_output_related_products - 20
 	 */
-	do_action( 'woocommerce_after_single_product_summary' );
-	?>
-</div>
 
-<?php do_action( 'woocommerce_after_single_product' ); ?>
+	?>
+    </div>
+
+<?php 
+
+do_action( 'woocommerce_after_single_product' ); 
+?>

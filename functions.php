@@ -71,6 +71,25 @@ add_filter('wp_nav_menu','add_menuclass');
     return $rating_html;
     }
 
+
+ // add_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );
+
+  add_action( 'woocommerce_after_single_product_summary', 'related_products', 9 );
+function related_products(){
+    remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );
+    //add_action('um_post_registration_approved_hook', 'um_post_registration_approved_hook_new', 10, 2);
+
+}
+
+
+
+  add_action( 'um_post_registration_approved_hook', 'remove_my_action', 9 );
+function remove_my_action(){
+    remove_action('um_post_registration_approved_hook', 'um_post_registration_approved_hook', 10, 2);
+    add_action('um_post_registration_approved_hook', 'um_post_registration_approved_hook_new', 10, 2);
+
+}
+
 create_page("Brand"," ","page-templates/brands.php");
 function create_page($page_name,$content,$template){
      if(get_page_by_title($page_name)==NULL|| get_post_status( get_page_by_title($page_name) )=="trash") {
@@ -640,17 +659,17 @@ function brands(){
         add_option('brand_header1',$brand_header1,'','yes');
         update_option('brand_header1',$brand_header1);
 
-        add_option('brand_header2',$brand_header1,'','yes');
-        update_option('brand_header2',$brand_header1);
+        add_option('brand_header2',$brand_header2,'','yes');
+        update_option('brand_header2',$brand_header2);
 
-        add_option('brand_header3',$brand_header1,'','yes');
-        update_option('brand_header3',$brand_header1);
+        add_option('brand_header3',$brand_header3,'','yes');
+        update_option('brand_header3',$brand_header3);
 
-        add_option('brand_header4',$brand_header1,'','yes');
-        update_option('brand_header4',$brand_header1);
+        add_option('brand_header4',$brand_header4,'','yes');
+        update_option('brand_header4',$brand_header4);
 
-        add_option('brand_header5',$brand_header1,'','yes');
-        update_option('brand_header5',$brand_header1);
+        add_option('brand_header5',$brand_header5,'','yes');
+        update_option('brand_header5',$brand_header5);
 
       
 
