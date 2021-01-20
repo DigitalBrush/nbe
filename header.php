@@ -133,7 +133,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 								</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="<?php echo esc_url(home_url('/cart')); ?>">
+								<a class="nav-link" href="<?php echo esc_url(home_url('/basket')); ?>">
 									<img class="shop-icon" src="<?php echo get_template_directory_uri(); ?>/img/iconCart.svg" />
 								</a>
 							</li>
