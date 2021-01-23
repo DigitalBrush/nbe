@@ -484,6 +484,7 @@ pre {
   display: -moz-box;
   display: -ms-flexbox;
   display: flex;
+  justify-content: space-evenly;
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
@@ -1146,14 +1147,14 @@ pre {
         -ms-flex: 0 0 16.66667%;
             flex: 0 0 16.66667%;
     max-width: 16.66667%; }
-  .col-md-3 {
+  .col-md-4 {
     -webkit-box-flex: 0;
     -webkit-flex: 0 0 25%;
        -moz-box-flex: 0;
         -ms-flex: 0 0 25%;
             flex: 0 0 25%;
     max-width: 25%; }
-  .col-md-4 {
+  .col-md-3 {
     -webkit-box-flex: 0;
     -webkit-flex: 0 0 33.33333%;
        -moz-box-flex: 0;
@@ -3494,7 +3495,9 @@ fieldset:disabled a.btn {
 
 .btn-block {
   display: block;
-  width: 100%; }
+  width: 100%;
+  min-height: fit-content !important;
+}
   .btn-block + .btn-block {
     margin-top: 0.5rem; }
 
@@ -13557,23 +13560,40 @@ h1 {
 .woocommerce ul.products {
   padding: 30px; }
   .woocommerce ul.products li.product a {
-    padding: 20px;
+    padding: 5px;
     display: block;
-    height: 100%; }
+    height: 100%;
+    min-height:250px;
+   }
+  .woocommerce ul.products li.product, .woocommerce-page ul.products li.product,.woocommerce ul.products li.first, .woocommerce-page ul.products li.first, .woocommerce ul.products li.last, .woocommerce-page ul.products li.last {
+    float:left !important;
+    margin: 0px 1.8% 2.992em 0 !important;
+    padding: 0 !important;
+    position:relative !important;
+    max-width: 31% !important;
+    flex:0 0 33.3333% !important;
+    clear: none !important;
+
+  }
+    
     .woocommerce ul.products li.product a:hover {
       -webkit-box-shadow: 1px 3px 5px 2px rgba(59, 66, 70, 0.15);
               box-shadow: 1px 3px 5px 2px rgba(59, 66, 70, 0.15);
       border-radius: 2px; }
   .woocommerce ul.products li.product .woocommerce-loop-product__link img {
-    height: 250px;
-    max-height: 250px;
-    width: auto;
+    height: auto;
+    max-height: fit-content;
+    width: 100%;
     -o-object-fit: contain;
        object-fit: contain; }
+  .woocommerce ul.products li.product .woocommerce-placeholder{
+    border:1 solid #f2f2f2 !important;
+    max-height:127px !important;
+  }
   .woocommerce ul.products li.product .woocommerce-loop-product__link .woocommerce-loop-product__title {
     color: #1D1F22;
     font-weight: 300;
-    font-size: 18px;
+    font-size: 80%;
     text-transform: capitalize; }
   .woocommerce ul.products li.product .price {
     color: #1D1F22;
