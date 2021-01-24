@@ -851,3 +851,21 @@ function who_we_are(){
 
 
 }
+
+
+add_filter('get_comment_author', 'my_comment_author', 10, 1);
+function my_comment_author( $author = '' ) {
+// Get the comment ID from WP_Query
+$comment = get_comment( $comment_ID );
+if (!empty($comment->comment_author) ) {
+if($comment->user_id > 0){
+$user=get_userdata($comment->user_id);
+$author=$user->first_name.' '.substr($user->last_name,0,1).'.'; // this is the actual line you want to change
+} else {
+$author = __('Anonymous');
+}
+} else {
+$author = $comment->comment_author;
+}
+return $author;
+}
