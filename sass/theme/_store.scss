@@ -45,6 +45,15 @@
                     height: 100%;
                 }
             } 
+            .flex-viewport {
+                max-height: 600px;
+                .woocommerce-product-gallery__wrapper {
+                    height: 100%;
+                    .woocommerce-product-gallery__image {
+                        height: 100%;
+                    }
+                } 
+            }
         }
         div.summary {
             .product_title {
