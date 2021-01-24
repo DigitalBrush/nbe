@@ -47,10 +47,6 @@
             } 
         }
         div.summary {
-            @include media-breakpoint-up(md) {
-                float: left !important;
-                width: 48% !important;
-            }
             .product_title {
                 font-size: 26px;
                 font-weight: 600;
