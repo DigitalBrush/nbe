@@ -3,7 +3,6 @@
         padding: 0;
         .widget-title {
             border-top: 1px solid $gray-300;
-            border-bottom: 1px solid $gray-300;
             padding: $spacing-md 0;
             height: 70px;
             margin: 0;
@@ -11,6 +10,7 @@
         ul.product-categories {
             padding: $spacing-lg $spacing-lg 0 0;
             list-style: none;
+            border-top: 1px solid $gray-300;
             li.cat-item {
                 padding: $spacing-xs 0;
                 display: flex;
