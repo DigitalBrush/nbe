@@ -46,7 +46,31 @@
                 }
             } 
             .flex-viewport {
-                max-height: 600px;
+                height: 300px;
+                max-height: 300px;
+                text-align: center;
+                @include media-breakpoint-up(md) {
+                    height: 400px;
+                    max-height: 400px;
+                    float: left !important;
+                }
+                @include media-breakpoint-up(lg) {
+                    height: 600px;
+                    max-height: 600px;
+                    float: left;
+                    width: 48%;
+                }
+                img {
+                    width: auto;
+                    height: 100%;
+                    margin: 0 auto;
+                }
+                .woocommerce-product-gallery__wrapper {
+                    height: 100%;
+                    .woocommerce-product-gallery__image {
+                        height: 100%;
+                    }
+                }    
                 .woocommerce-product-gallery__wrapper {
                     height: 100%;
                     .woocommerce-product-gallery__image {
