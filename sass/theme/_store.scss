@@ -20,13 +20,13 @@
             }
         }
         div.images {
-            height: 300px;
-            max-height: 300px;
+            height: 100%;
             text-align: center;
             @include media-breakpoint-up(md) {
                 height: 400px;
                 max-height: 400px;
                 float: left !important;
+                width: 48% !important;
             }
             @include media-breakpoint-up(lg) {
                 height: 600px;
@@ -52,13 +52,10 @@
                 @include media-breakpoint-up(md) {
                     height: 400px;
                     max-height: 400px;
-                    float: left !important;
                 }
                 @include media-breakpoint-up(lg) {
                     height: 600px;
                     max-height: 600px;
-                    float: left;
-                    width: 48%;
                 }
                 img {
                     width: auto;
@@ -78,6 +75,11 @@
                         padding: $spacing-md 0;
                     }
                 } 
+            }
+            .flex-control-thumbs {
+                li {
+                    margin-right: $spacing;
+                }
             }
         }
         div.summary {
