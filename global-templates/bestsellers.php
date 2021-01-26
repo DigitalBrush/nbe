@@ -38,12 +38,11 @@ $container = get_theme_mod( 'understrap_container_type' );
                   $query = new WP_Query( $args );
                   if( $query->have_posts()) : while( $query->have_posts() ) : $query->the_post();
               ?>
-                  
-          
+
 
               <div class="col-md-3 col-6">
               <div class="product">
-               <a href="<?php echo esc_url(get_permalink());?>" rel="bookmark">
+               <a href="<?php echo esc_url(get_permalink());?>" rel="bookmark" style="margin-bottom:10px;">
                 <div class="product-item woocommerce">
                   <div class="pi-img-wrapper">
                     <?php if (has_post_thumbnail(get_the_ID() ) ): ?>
@@ -69,7 +68,11 @@ $container = get_theme_mod( 'understrap_container_type' );
                 
                 </div>
                   </a> 
+
+                    <div><a href="<?php echo esc_url(get_permalink());?>" class="btn btn-primary btn-block"  rel="nofollow" style="padding:5px">Voir le produit</a></div>
+
                   </div>
+               
 
               </div>
          
