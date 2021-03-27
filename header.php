@@ -122,9 +122,8 @@ $container = get_theme_mod( 'understrap_container_type' );
 									<img class="shop-icon" src="<?php echo get_template_directory_uri(); ?>/img/iconFavorites.svg" />
 								</a>
 							</li>
-							<li class="nav-item">
-								<?php echo do_shortcode("[woo_cart_but]"); ?>
-							</li>
+							
+							<?php echo do_shortcode("[woo_cart_but]"); ?>
 						</ul>
 					</div>
 				</div>
