@@ -150,6 +150,7 @@ function woo_cart_but() {
      
      ?>
      <a class="cart-contents nav-link" href="<?php echo $cart_url; ?>" title="<?php _e( 'View your shopping cart' ); ?>">
+     <img class="shop-icon" src="<?php echo get_template_directory_uri(); ?>/img/iconCart.svg" />
      <?php
      if ( $cart_count > 0 ) {
          ?>
