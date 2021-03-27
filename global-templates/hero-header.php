@@ -22,8 +22,16 @@ $container = get_theme_mod( 'understrap_container_type' );
 					</div>
 				</div>
 				<div class="col-sm-6 hero-image">
-					<div class="slider-image">
-						<img src="<?php echo get_option('slide_img_1');?>" style="width:100%"/>
+					<div class="owl-carousel owl-theme hero-slider">
+						<div class="slider-image">
+							<img src="<?php echo get_option('slide_img_1');?>" style="width:100%"/>
+						</div>
+						<div class="slider-image">
+							<img src="<?php echo get_option('slide_img_2');?>" style="width:100%"/>
+						</div>
+						<div class="slider-image">
+							<img src="<?php echo get_option('slide_img_3');?>" style="width:100%"/>
+						</div>
 					</div>
 				</div>
 			</div>

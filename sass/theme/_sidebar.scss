@@ -13,11 +13,33 @@
             border-top: 1px solid $gray-300;
             li.cat-item {
                 padding: $spacing-xs 0;
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
+                text-transform: uppercase;
+                a {
+                    color: $nbe-gray;
+                }
                 .count {
                     color: $nbe-gray;
+                    float: right;
+                }
+                &.current-cat-parent {
+                    a {
+                        font-weight: bold;
+                    }
+                }
+                .children {
+                    a {
+                        color: $primary;
+                        font-weight: normal;
+                    }
+                    .cat-item {
+                        text-transform: capitalize;
+                        font-weight: normal;
+                        &.current-cat {
+                            a {
+                                font-weight: bold;
+                            }
+                        }
+                    }
                 }
             }
         }

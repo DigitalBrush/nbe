@@ -110,6 +110,67 @@ function create_page($page_name,$content,$template){
         
  }
 
+ add_shortcode ('woo_cart_but', 'woo_cart_but' );
+/**
+ * Create Shortcode for WooCommerce Cart Menu Item
+ */
+function woo_cart_but() {
+	ob_start();
+ 
+        $cart_count = WC()->cart->cart_contents_count; // Set variable for cart item count
+        $cart_url = wc_get_cart_url();  // Set Cart URL
+  
+        ?>
+        <li class="nav-item"><a class="nav-link cart-contents" href="<?php echo $cart_url; ?>" title="My Basket">
+        <img class="shop-icon" src="<?php echo get_template_directory_uri(); ?>/img/iconCart.svg" />
+	    <?php
+        if ( $cart_count > 0 ) {
+       ?>
+            <span class="cart-contents-count"><?php echo $cart_count; ?></span>
+        <?php
+        }
+        ?>
+        </a></li>
+        <?php
+	        
+    return ob_get_clean();
+ 
+}
+
+ add_filter( 'woocommerce_add_to_cart_fragments', 'woo_cart_but_count' );
+ /**
+  * Add AJAX Shortcode when cart contents update
+  */
+ function woo_cart_but_count( $fragments ) {
+  
+     ob_start();
+     
+     $cart_count = WC()->cart->cart_contents_count;
+     $cart_url = wc_get_cart_url();
+     
+     ?>
+     <a class="cart-contents nav-link" href="<?php echo $cart_url; ?>" title="<?php _e( 'View your shopping cart' ); ?>">
+     <?php
+     if ( $cart_count > 0 ) {
+         ?>
+         <span class="cart-contents-count"><?php echo $cart_count; ?></span>
+         <?php            
+     }
+         ?></a>
+     <?php
+  
+     $fragments['a.cart-contents'] = ob_get_clean();
+      
+     return $fragments;
+ }
+ 
+function addPriceSuffixAction() {
+	add_action('woocommerce_price_format', 'addPriceSuffix', 1, 2);
+}
+ 
+add_action('woocommerce_before_cart', 'addPriceSuffixAction');
+add_action('woocommerce_review_order_before_order_total', 'addPriceSuffixAction');
+
 add_action('admin_menu', 'customize_homepage');
 
 function customize_homepage() { 

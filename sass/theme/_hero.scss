@@ -16,5 +16,13 @@
     }
     .hero-image {
         padding: 0;
+        .hero-slider {
+            position: relative;
+            .owl-dots {
+                position: absolute;
+                bottom: 10px;
+                right: 10px;
+            }
+        }
     }
 }

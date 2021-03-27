@@ -184,8 +184,36 @@
             .shop-icon {
                 width: 24px;
             }
+            &.cart-contents {
+                position: relative;
+                display: flex !important;
+                flex-flow: column nowrap;
+                justify-content: center;
+                &:hover {
+                    text-decoration: none;
+                }
+                .cart-contents-count {
+                    position: absolute;
+                    top: 20px;
+                    right: 1px;
+                    transform: translateY(-105%) translateX(25%);
+                    font-weight: bold;
+                    font-size: 12px;
+                    line-height: 16px;
+                    height: 20px;
+                    width: 20px;
+                    vertical-align: middle;
+                    text-align: center;
+                    color: #fff;
+                    background: $primary;
+                    border-radius: 50%;
+                    padding: 1px;
+                }
+            }
+
         }
     }
+    
 }
 
 
