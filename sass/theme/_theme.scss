@@ -93,7 +93,8 @@ h3 {
 .product-section {
     .product {
         height: 100%;
-        margin-bottom: $spacing-xxl;
+        padding-bottom: $spacing-xxl;
+        display: block;
         a {
             padding: $spacing-md;
             display: block;

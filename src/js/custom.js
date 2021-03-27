@@ -6,7 +6,7 @@ jQuery(function($){
         responsive:{
             0:{
                 items:2,
-                nav:true
+                nav:false
             },
             600:{
                 items:3,
@@ -14,8 +14,7 @@ jQuery(function($){
             },
             1000:{
                 items:5,
-                nav:true,
-                loop:false
+                nav:false
             }
         }
     })
