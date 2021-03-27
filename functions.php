@@ -121,12 +121,12 @@ function woo_cart_but() {
         $cart_url = wc_get_cart_url();  // Set Cart URL
   
         ?>
-        <li class="nav-item"><a class="nav-link cart-contents" href="<?php echo $cart_url; ?>" title="My Basket">
+        <li class="nav-item"><a class="nav-link cart-content" href="<?php echo $cart_url; ?>" title="My Basket">
         <img class="shop-icon" src="<?php echo get_template_directory_uri(); ?>/img/iconCart.svg" />
 	    <?php
         if ( $cart_count > 0 ) {
        ?>
-            <span class="cart-contents-count"><?php echo $cart_count; ?></span>
+            <span class="cart-content-count"><?php echo $cart_count; ?></span>
         <?php
         }
         ?>
@@ -149,25 +149,22 @@ function woo_cart_but() {
      $cart_url = wc_get_cart_url();
      
      ?>
-     <a class="cart-contents nav-link" href="<?php echo $cart_url; ?>" title="<?php _e( 'View your shopping cart' ); ?>">
+     <a class="nav-link cart-content" href="<?php echo $cart_url; ?>" title="<?php _e( 'View your shopping cart' ); ?>">
      <img class="shop-icon" src="<?php echo get_template_directory_uri(); ?>/img/iconCart.svg" />
      <?php
      if ( $cart_count > 0 ) {
          ?>
-         <span class="cart-contents-count"><?php echo $cart_count; ?></span>
+         <span class="cart-content-count"><?php echo $cart_count; ?></span>
          <?php            
      }
          ?></a>
      <?php
   
-     $fragments['a.cart-contents'] = ob_get_clean();
+     $fragments['a.cart-content'] = ob_get_clean();
       
      return $fragments;
  }
  
-function addPriceSuffixAction() {
-	add_action('woocommerce_price_format', 'addPriceSuffix', 1, 2);
-}
  
 add_action('woocommerce_before_cart', 'addPriceSuffixAction');
 add_action('woocommerce_review_order_before_order_total', 'addPriceSuffixAction');

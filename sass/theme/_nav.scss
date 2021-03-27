@@ -184,7 +184,7 @@
             .shop-icon {
                 width: 24px;
             }
-            &.cart-contents {
+            &.cart-content {
                 position: relative;
                 display: flex !important;
                 flex-flow: column nowrap;
@@ -192,7 +192,7 @@
                 &:hover {
                     text-decoration: none;
                 }
-                .cart-contents-count {
+                .cart-content-count {
                     position: absolute;
                     top: 20px;
                     right: 1px;
