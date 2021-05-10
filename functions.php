@@ -8,6 +8,8 @@
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 
+require_once "nbe_reg.php";
+
 // UnderStrap's includes directory.
 $understrap_inc_dir = get_template_directory() . '/inc';
 
