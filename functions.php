@@ -930,3 +930,21 @@ $author = $comment->comment_author;
 }
 return $author;
 }
+
+
+add_action( 'init', 'nbe_hide_price_add_cart_not_logged_in' );
+  
+function nbe_hide_price_add_cart_not_logged_in() {   
+   if ( ! is_user_logged_in() ) {      
+      remove_action( 'woocommerce_after_shop_loop_item', 'woocommerce_template_loop_add_to_cart', 10 );
+      remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_add_to_cart', 30 );
+      remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_price', 10 );
+      remove_action( 'woocommerce_after_shop_loop_item_title', 'woocommerce_template_loop_price', 10 );   
+     // add_action( 'woocommerce_single_product_summary', 'nbe_print_login_to_see', 31 );
+      //add_action( 'woocommerce_after_shop_loop_item', 'nbe_print_login_to_see', 11 );
+   }
+}
+  
+function nbe_print_login_to_see() {
+   echo '<a href="' . get_permalink(wc_get_page_id('myaccount')) . '">' . __('Login to see prices', 'theme_name') . '</a>';
+}

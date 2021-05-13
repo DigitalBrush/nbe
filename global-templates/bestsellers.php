@@ -56,10 +56,11 @@ $container = get_theme_mod( 'understrap_container_type' );
                   <h3 class="entry-title"><?php the_title(); ?></h3>
 
                   <?php $product = wc_get_product( get_the_ID() ); ?>
-
+                  <?php if(is_user_logged_in()):?>
                   <div class="pi-price">
                     <?php echo $product->get_price_html(); ?><br>
                   </div>
+                <?php endif;?>
                   <div class="pi-rating">
                      <?php echo wc_get_rating_html( $product->get_average_rating() );?>
                   </div>
