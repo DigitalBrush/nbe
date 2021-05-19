@@ -120,7 +120,7 @@ function register(){
 
 ?>  
   
-  <div class="col-md-6">
+  <div class="col-md-12">
        <!-- general form elements -->
               <div class="box box-primary" >
                  <div class="box-body"><form name="registerform" id="registerform" action="<?php echo esc_url( $_SERVER['REQUEST_URI'].'?action=register', 'login_post' ) ?>" method="post" novalidate="novalidate">
@@ -207,7 +207,7 @@ function ts_show_extra_register_fields(){
               </div><!-- /.box -->
       </div>  
         
-    <div class="col-md-6">
+    <div class="col-md-12">
        <!-- general form elements -->
               <div class="box box-primary" >     
                 
@@ -346,7 +346,7 @@ function reg_shortcode() {
 }
 add_shortcode( 'client-reg', 'reg_shortcode' );
 
-create_page("Register","[client-reg]","page-templates/both-sidebarspage.php");  
+create_page("Register","[client-reg]","page-templates/fullwidthpage.php");  
 
 add_action('admin_menu', 'customers');
 

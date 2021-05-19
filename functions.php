@@ -1089,4 +1089,4 @@ add_shortcode( 'contact-frm', 'contact');
 //     } 
         
 //  }
-  create_page("Contact","[contact-frm]","page-templates/both-sidebarspage.php");  
+  create_page("Contact","[contact-frm]","page-templates/fullwidthpage.php");  
