@@ -948,3 +948,145 @@ function nbe_hide_price_add_cart_not_logged_in() {
 function nbe_print_login_to_see() {
    echo '<a href="' . get_permalink(wc_get_page_id('myaccount')) . '">' . __('Login to see prices', 'theme_name') . '</a>';
 }
+
+
+
+function contact(){?>
+
+    <?php
+      if(isset($_REQUEST['contact_btn'])){ 
+
+          
+        $to      = get_bloginfo('admin_email');
+        $phone = $_REQUEST['phone'];
+        $message = $_REQUEST['message'];
+        $address = $_REQUEST['address'];
+        if(isset($_POST['product_categories']))
+        $categories=implode(",",$_POST['product_categories']);
+        else $categories="";
+        $headers = "MIME-Version: 1.0" . "\r\n";
+        $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n"; 
+        $headers .= 'From:'. $_REQUEST['email'] . "\r\n".
+                  'Reply-To: ' . "\r\n" .
+                          'X-Mailer: PHP/' . phpversion();
+        $headers .= 'Bcc: ' . "\r\n";        
+        $subject="Inquiry";
+        $message="Company Name: ".$_REQUEST['company_name']."<br>Agent Name: ".$_REQUEST['agent_name']."<br>Phone: ".$phone."<br>Address: ".$address."<br>Categories: ".$categories."<br>   ".$message;              
+        
+
+        echo wp_mail( $to, $subject, $message, $headers);
+
+
+        // if(wp_mail( $to, $subject, $message, $headers, '' ))echo"<p style='color:#008000;'> Thank you </p>";
+
+        echo "<div class='btn-primary' style='padding:10px;'>Thank you!</div>";
+         }
+      unset($_POST);
+        ?>
+<div style="padding:10px">
+
+    <pre>
+
+    <?php
+
+    // $pf = new WC_Product_Factory(); 
+    // $product = $pf->get_product($_REQUEST['pid']);
+      ?>
+   </pre>
+     <form action="<?php echo esc_url( $_SERVER['REQUEST_URI'] ) ?>" method="post">
+
+       <div class="form-group">
+            <label for="name"> Company Name:</label>
+            <input type="text" name="company_name" class="form-control" >
+        </div>
+        <div class="form-group">
+            <label for="name"> Agent Name:</label>
+            <input type="text" name="agent_name" class="form-control" >
+        </div>
+
+        <div class="form-group">
+            <label for="phone">Phone:</label>
+            <input type="text" name="phone" class="form-control">
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email:</label>
+             <input type="email" name="email" class="form-control">
+        </div>
+
+        <div class="form-group">
+            <label for="address">Address:</label>
+             <input type="text" name="address" class="form-control">
+        </div>
+        <div class="form-group">
+        <label for="product_categories">Product Categories</label><br>
+            <?php
+
+                    $taxonomy     = 'product_cat';
+                    $orderby      = 'name';  
+                    $show_count   = 0;      // 1 for yes, 0 for no
+                    $pad_counts   = 0;      // 1 for yes, 0 for no
+                    $hierarchical = 1;      // 1 for yes, 0 for no  
+                    $title        = '';  
+                    $empty        = 0;
+
+                    $args = array(
+                           'taxonomy'     => $taxonomy,
+                           'orderby'      => $orderby,
+                           'show_count'   => $show_count,
+                           'pad_counts'   => $pad_counts,
+                           'hierarchical' => $hierarchical,
+                           'title_li'     => $title,
+                           'hide_empty'   => $empty
+                    );
+                   $all_categories = get_categories( $args );
+               
+                   foreach ($all_categories as $cat) {
+                      if($cat->category_parent == 0) {
+                        ?> 
+                        <label><input type="checkbox" name="product_categories[]" value="<?php echo $cat->name  ?>"><?php echo $cat->name  ?></label>       
+                                    
+                  <?php
+
+                          
+                    }       
+                  }
+                  ?>
+
+    
+    </div>
+
+        <div class="form-group">
+            <label for="message">Message:</label>    
+            <textarea  name="message" class="form-control" rows="6">
+        
+
+            </textarea> 
+        </div>
+        <input type="submit" name="contact_btn" value="SUBMIT" class="btn btn-primary">
+     </form>
+</div>               
+
+<?php 
+}
+
+add_shortcode( 'contact-frm', 'contact');
+
+// function create_page($page_name,$content,$template){
+//      if(get_page_by_title($page_name)==NULL|| get_post_status( get_page_by_title($page_name) )=="trash") {
+
+//          $my_post = array(
+//           'post_title'    => $page_name,
+//           'post_content'  =>$content,         
+//           'post_status'   => 'publish',      
+//           'post_type'     =>'page',
+//           'comment_status' =>'closed',
+//           'page_template'  =>$template        
+//         );
+//         $post_id = wp_insert_post( $my_post);
+        
+        
+//     } 
+        
+//  }
+  create_page("Contatct","[contact-frm]","page-templates/both-sidebarspage.php");  
