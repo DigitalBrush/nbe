@@ -49,7 +49,7 @@ function registration_process(){
   
               <div class="box box-warning box-solid">
                 <div class="box-header with-border">
-                  <h3 class="box-title">There was a problem</h3>
+                  <h3 class="box-title">Il y avait un problème</h3>
                   <div class="box-tools pull-right">
                     <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
                   </div><!-- /.box-tools -->
@@ -103,7 +103,7 @@ function registration_process(){
   
               <div class="box box-success box-solid">
                 <div class="box-header with-border">
-                  <h3 class="box-title">Success</h3>
+                  <h3 class="box-title">Succès</h3>
                   <div class="box-tools pull-right">
                     <button class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
                   </div><!-- /.box-tools -->
@@ -192,7 +192,7 @@ function ts_show_extra_register_fields(){
     
     
           <div class="form-group">
-          <label for="repeat_password">Repeat password</label>
+          <label for="repeat_password">Répéter le mot de passe</label>
           <input id="repeat_password" class="form-control" type="password"  value="" name="repeat_password" />
           
           </div>
@@ -215,7 +215,7 @@ function ts_show_extra_register_fields(){
     
     
     <div class="form-group">
-        <label for="company_name">Company name</label>
+        <label for="company_name">Nom de société</label>
     <input id="company_name" class="form-control" type="text"  value="" name="company_name" />
    
     </div>
@@ -223,38 +223,38 @@ function ts_show_extra_register_fields(){
 
 
     <div class="form-group">
-        <label for="siret">Siret</label>
+        <label for="siret">N° de siret</label>
     <input id="siret" class="form-control" type="text"  value="" name="siret" />
     
     </div>
 
 
     <div class="form-group">
-        <label for="vat_number">VAT number</label>
+        <label for="vat_number">N° de TVA</label>
     <input id="vat_number" class="form-control" type="text"  value="" name="vat_number" />
     
     </div>
 
     <div class="form-group">
-        <label for="address">Address</label>
+        <label for="address">Adresse</label>
     <input id="address" class="form-control" type="text"  value="" name="address" />
     
     </div>
 
     <div class="form-group">
-        <label for="phone">Phone</label>
+        <label for="phone">Téléphone</label>
     <input id="phone" class="form-control" type="text"  value="" name="phone" />
     
     </div>
 
      <div class="form-group">
-        <label for="ave_sales">Avarage Sales</label>
+        <label for="ave_sales">Surface moyenne de vente</label>
     <input id="ave_sales" class="form-control" type="text"  value="" name="ave_sales" />
     
     </div>
 
     <div class="form-group">
-        <label for="product_categories">Product Categories</label><br>
+        <label for="product_categories">Sélection des catégorie de produit</label><br>
             <?php
 
                     $taxonomy     = 'product_cat';
@@ -410,13 +410,13 @@ global $wpdb;
         <thead>
             <tr>
                 <th>Username</th>
-                <th>Company name</th>
-                <th>Siret</th>
-                <th>VAT Number</th>
-                <th>Address</th>
-                <th>Phone</th>
-                <th>Avarage Sales</th>
-                <th>Product Categories</th>
+                <th>Nom de société</th>
+                <th>N° de siret</th>
+                <th>N° de TVA</th>
+                <th>Adresse</th>
+                <th>Téléphone</th>
+                <th>Surface moyenne de vente</th>
+                <th>Sélection des catégorie de produit</th>
 
              
         </thead>

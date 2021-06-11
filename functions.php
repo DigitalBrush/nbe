@@ -971,7 +971,7 @@ function contact(){?>
                           'X-Mailer: PHP/' . phpversion();
         $headers .= 'Bcc: ' . "\r\n";        
         $subject="Inquiry";
-        $message="Company Name: ".$_REQUEST['company_name']."<br>Agent Name: ".$_REQUEST['agent_name']."<br>Phone: ".$phone."<br>Address: ".$address."<br>Categories: ".$categories."<br>   ".$message;              
+        $message="Nom de société: ".$_REQUEST['company_name']."<br>Nom d'agent: ".$_REQUEST['agent_name']."<br>Téléphone: ".$phone."<br>Adresse: ".$address."<br>Catégorie de produit souhaitée: ".$categories."<br>   ".$message;              
         
 
         echo wp_mail( $to, $subject, $message, $headers);
@@ -996,16 +996,16 @@ function contact(){?>
      <form action="<?php echo esc_url( $_SERVER['REQUEST_URI'] ) ?>" method="post">
 
        <div class="form-group">
-            <label for="name"> Company Name:</label>
+            <label for="name">Nom de société:</label>
             <input type="text" name="company_name" class="form-control" >
         </div>
         <div class="form-group">
-            <label for="name"> Agent Name:</label>
+            <label for="name">Nom d'agent:</label>
             <input type="text" name="agent_name" class="form-control" >
         </div>
 
         <div class="form-group">
-            <label for="phone">Phone:</label>
+            <label for="phone">Téléphone:</label>
             <input type="text" name="phone" class="form-control">
         </div>
 
@@ -1015,11 +1015,11 @@ function contact(){?>
         </div>
 
         <div class="form-group">
-            <label for="address">Address:</label>
+            <label for="address">Adresse:</label>
              <input type="text" name="address" class="form-control">
         </div>
         <div class="form-group">
-        <label for="product_categories">Product Categories</label><br>
+        <label for="product_categories">Catégorie de produit souhaitée (bouton de sélection)</label><br>
             <?php
 
                     $taxonomy     = 'product_cat';
@@ -1057,7 +1057,7 @@ function contact(){?>
     </div>
 
         <div class="form-group">
-            <label for="message">Message:</label>    
+            <label for="message">Champs de texte:</label>    
             <textarea  name="message" class="form-control" rows="6">
         
 
