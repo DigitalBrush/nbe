@@ -126,7 +126,7 @@ function register(){
                  <div class="box-body"><form name="registerform" id="registerform" action="<?php echo esc_url( $_SERVER['REQUEST_URI'].'?action=register', 'login_post' ) ?>" method="post" novalidate="novalidate">
                   
                     <div class="form-group">
-          <label for="user_login"><?php _e('Username') ?></label> 
+          <label for="user_login">Nom d'utilisateur</label> 
                  <input type="text" name="user_login" id="user_login" class="form-control" value=""  />                     
                     </div>
           
@@ -157,7 +157,7 @@ function register(){
 
                  <br class="clear" />
   <input type="hidden"  class="form-control" name="redirect_to" value="<?php the_permalink(); ?>" />  
-  <input type="submit" name="wp-submit" id="wp-submit" class="btn btn-primary" value="<?php esc_attr_e('Register'); ?>" />
+  <input type="submit" name="wp-submit" id="wp-submit" class="btn btn-primary" value="Valider" />
                   </div>
                 </form>
               </div><!-- /.box -->

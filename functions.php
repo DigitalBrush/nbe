@@ -1063,7 +1063,7 @@ function contact(){?>
 
             </textarea> 
         </div>
-        <input type="submit" name="contact_btn" value="SUBMIT" class="btn btn-primary">
+        <input type="submit" name="contact_btn" value="Valider" class="btn btn-primary">
      </form>
 </div>               
 
